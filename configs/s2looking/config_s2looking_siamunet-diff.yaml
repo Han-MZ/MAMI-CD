@@ -1,0 +1,6 @@
+# S2Looking+SiamUNet-diff
+
+out_dir: siamunet-diff
+model: SiamUNet-diff
+
+device: cuda:1

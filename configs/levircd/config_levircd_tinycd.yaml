@@ -1,0 +1,21 @@
+# SVCD+BIT
+
+out_dir: tinycd
+model: TinyCD
+
+criterion: WBCE
+out_type: logits
+# Optimizer
+#optimizer: Adam
+#lr: 0.001
+#weight_decay: 0.0
+
+#schedulers:
+#  - name: CosineAnnealingLR
+#    T_max: 100
+
+tinycd_model:
+  bkbn_name: 'efficientnet_b4'
+  pretrained: True
+  output_layer_bkbn: '3'
+  freeze_backbone: False

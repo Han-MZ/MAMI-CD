@@ -1,0 +1,6 @@
+# CDD+SiamUNet-conc
+
+out_dir: siamunet-conc
+model: SiamUNet-conc
+
+device: cuda:1

@@ -1,0 +1,6 @@
+# DSIFN+UNet
+
+out_dir: unet
+model: UNet
+
+device: cuda:1

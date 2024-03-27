@@ -1,0 +1,19 @@
+
+out_dir: msacd
+model: MSACD
+
+criterion: BCE
+out_type: logits
+# Optimizer
+optimizer: Adamw
+lr: 0.001
+weight_decay: 0.01
+
+schedulers:
+  - name: CosineAnnealingLR
+    T_max: 100
+
+msacd_model:
+  bkbn_name: 'efficientnet_v2_m'
+
+device: cuda:1
