@@ -1,6 +1,6 @@
 
-out_dir: msacd
-model: MSACD
+out_dir: msamcd
+model: MSAMCD
 
 criterion: BCE
 out_type: logits
@@ -13,7 +13,7 @@ schedulers:
   - name: CosineAnnealingLR
     T_max: 100
 
-msacd_model:
+msamcd_model:
   bkbn_name: 'efficientnet_v2_s'
 
 device: cuda:0
