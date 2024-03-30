@@ -1,15 +1,15 @@
 
 from torch import Tensor
 from models.module.base_dfisc import (
-    SCAM,
+    MSAM,
     getBackbone,
-    EMCM,
+    MCM,
     FFUM,
     Head,
 )
 from torch.nn import ModuleList, Module, Sigmoid
 
-class MSACD(Module):
+class MSAMCD(Module):
     def __init__(self, bkbn_name:str):
         super().__init__()
 
@@ -18,9 +18,9 @@ class MSACD(Module):
         # Initialize sdam blocks:
         self._mixing_mask = ModuleList(
             [
-                SCAM(6),
-                SCAM(48),
-                SCAM(96)
+                MSAM(6),
+                MSAM(48),
+                MSAM(96)
             ]
         )
         # Initialize Upsampling blocks:
@@ -30,9 +30,9 @@ class MSACD(Module):
             FFUM(67, 64, 32)
         ])
         # Initialize exchange blocks:
-        self._ex = EMCM(160, 80)
+        self._ex = MCM(160, 80)
         # Initialize mixing blocks:
-        self._mecam = EMCM(64, 32)
+        self._mecam = MCM(64, 32)
         # Final classification layer:
         self._classify = Head([32, 16, 8], [16, 8, 1], Sigmoid())
 
