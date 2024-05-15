@@ -47,7 +47,7 @@ def getBackbone(
     return derived_model
 
 
-class MCM(Module):
+class MIM(Module):
     def __init__(
         self, ch_in: int, ch_out: int, b=1, gamma=2
     ):
@@ -136,9 +136,9 @@ class Head(Module):
         # Processing the tensor:
         return self._linears(x)
 
-class MSAM(Module):
+class MAM(Module):
     def __init__(self, in_c, kernel_size=7):
-        super(MSAM, self).__init__()
+        super(MAM, self).__init__()
         assert kernel_size in (3, 7), 'kernel size must be 3 or 7'
         padding = 3 if kernel_size == 7 else 1
         self.conv7x7 = Conv2d(2, 1, kernel_size, padding=padding, bias=False)
