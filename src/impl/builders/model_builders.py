@@ -80,10 +80,10 @@ def build_tinycd_model(C):
     return TinyCD(**C['tinycd_model'])
 
 
-@MODELS.register_func('MSAMCD_model')
-def build_msamcd_model(C):
-    from models.msamcd import MSAMCD
-    return MSAMCD(**C['msamcd_model'])
+@MODELS.register_func('MAMICD_model')
+def build_mamicd_model(C):
+    from models.mamicd import MAMICD
+    return MAMICD(**C['mamicd_model'])
 
 @MODELS.register_func('CDP_model')
 def build_cdp_model(C):
