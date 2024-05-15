@@ -1,7 +1,6 @@
 # Global constants
 
 # Dataset locations
-
 IMDB_LEVIRCD = "~/data/levircd_512/"
 IMDB_S2Looking = "~/datas/s2looking_512/"
 IMDB_CDD = "~/datas/cdd_512/"
