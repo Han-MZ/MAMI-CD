@@ -1,6 +1,6 @@
 
-out_dir: msamcd
-model: MSAMCD
+out_dir: mamicd
+model: MAMICD
 
 criterion: BCE
 out_type: logits
@@ -13,7 +13,7 @@ schedulers:
   - name: CosineAnnealingLR
     T_max: 100
 
-msamcd_model:
+mamicd_model:
   bkbn_name: 'efficientnet_v2_m'
 
 device: cuda:1
