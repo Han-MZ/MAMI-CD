@@ -1,6 +1,6 @@
 
 from torch import Tensor
-from models.module.base_dfisc import (
+from models.module.base_mamicd import (
     MAM,
     getBackbone,
     MIM,
