@@ -185,7 +185,7 @@ class CDTrainer(Trainer):
                 losses.update(loss.item(), n=batch_size)
 
                 # Convert to numpy arrays
-                # msacd and tinycd
+                # mamicd and tinycd
                 prob = pred.cpu().numpy()
 
                 # other
